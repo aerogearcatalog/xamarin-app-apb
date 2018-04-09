@@ -1,0 +1,25 @@
+version: 1.0
+name: xamarin-app-apb
+description: Sets up a Xamarin App representation.
+bindable: False
+async: optional
+tags: 
+  - mobile
+metadata:
+  displayName: Xamarin App
+  console.openshift.io/iconClass: icon icon-xamarin
+plans:
+  - name: default
+    description: Sets up a Xamarin App representation.
+    free: True
+    metadata: {}
+    parameters:
+    - name: appName
+      required: True
+      default: myapp
+      type: string
+      title: Application Name
+    - name: appIdentifier
+      required: True
+      type: string
+      title: Package Name

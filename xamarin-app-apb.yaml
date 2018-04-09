@@ -1,0 +1,10 @@
+apiVersion: 2
+kind: ServiceInstance
+metadata:
+  name: xamarin-app-apb
+spec:
+  clusterServiceClassExternalName: dh-xamarin-app-apb
+  clusterServicePlanExternalName: (Plans->|default)
+  parameters:
+    appIdentifier: ansibleplaybookbundle
+    appName: ansibleplaybookbundle
