@@ -1,0 +1,3 @@
+# Creates a xamarin app representation using the mobile cli
+- name: "Create xamarin app represenation"
+  shell: mobile create client {{ appName }} xamarin {{ appIdentifier }} --namespace={{ namespace }}

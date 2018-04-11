@@ -1,0 +1,11 @@
+# Delete xamarin app representation using the mobile cli
+- set_fact: app_not_found_err='mobileclients.mobile.k8s.io "{{ appName }}-xamarin" not found'
+
+- name: "Check if {{ appName }} client exists"
+  shell: mobile get client {{ appName }}-xamarin --namespace={{ namespace }} -o=json
+  register: mobile_client
+  failed_when: mobile_client.stdout == "" and not(mobile_client.stderr | search(app_not_found_err))
+
+- name: "Delete xamarin app representation"
+  shell: mobile delete client {{ appName }}-xamarin --namespace={{ namespace }}
+  when: mobile_client.stderr == ""
