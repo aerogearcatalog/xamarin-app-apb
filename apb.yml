@@ -7,7 +7,8 @@ tags:
   - mobile
 metadata:
   displayName: Xamarin App
-  console.openshift.io/iconClass: icon icon-xamarin
+  console.openshift.io/iconClass: font-icon icon-xamarin
+  imageUrl: "images/logos/xamarin.svg"
 plans:
   - name: default
     description: Sets up a Xamarin App representation.
