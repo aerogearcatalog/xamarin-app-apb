@@ -1,0 +1,13 @@
+apiVersion: mobile.k8s.io/v1alpha1
+kind: MobileClient
+metadata:
+    annotations:
+        icon: font-icon icon-xamarin
+        service_instance_name: {{ service_instance_name.stdout }}
+    name: {{ appName }}-xamarin
+    namespace: {{ namespace }}
+spec:
+    apiKey: {{ service_instance_name | to_uuid}}
+    appIdentifier: {{ appIdentifier }}
+    clientType: xamarin
+    name: {{ appName }}
