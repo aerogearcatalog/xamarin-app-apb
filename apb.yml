@@ -9,7 +9,7 @@ metadata:
   displayName: Xamarin App
   console.openshift.io/iconClass: font-icon icon-xamarin
   imageUrl: "images/logos/xamarin.svg"
-  documentationUrl: "http://docs.aerogear.org"
+  documentationUrl: "http://docs.aerogear.org/external/apb/xamarin-app.html"
   serviceName: xamarin-app
 plans:
   - name: default
